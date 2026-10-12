@@ -1,0 +1,23 @@
+# 本地统计、偏好和开发产物
+/data/
+/artifacts/
+/github-ready/
+**/test-data-*/
+**/preview-data/
+**/upgrade-preview-data/
+**/backups/
+
+# 导出的记录、备份及日志
+*.csv
+*.zip
+*.log
+牛马日报-*.png
+牛马统计-*.png
+*.tmp
+*.bak
+*.corrupt*
+
+# 本地构建缓存
+.vs/
+bin/
+obj/
