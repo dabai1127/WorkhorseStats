@@ -2,7 +2,13 @@
 
 精致、轻量的 Windows 桌面使用统计小应用，记录一天的屏幕、软件、键盘和鼠标使用情况。数据保存在本机，无需账号，不连接网络。
 
-当前版本：**1.1.1**。
+![](https://github.com/dabai1127/WorkhorseStats/blob/main/preview1.png?raw=true)
+
+![](https://github.com/dabai1127/WorkhorseStats/blob/main/preview2.png?raw=true)
+
+![](https://github.com/dabai1127/WorkhorseStats/blob/main/preview3.png?raw=true)
+
+
 
 ## 快速开始
 
@@ -105,7 +111,6 @@ data/                    首次运行后生成的正式记录与安全备份，�
 src/                     C# 源码和窗口 XAML
 assets/                  应用图标
 build.ps1                编译脚本
-test.ps1                 回归测试脚本
 .editorconfig            PowerShell 脚本编码与换行约定
 artifacts/               开发时生成的构建、测试、预览及导出文件，不上传
 ```
@@ -113,14 +118,5 @@ artifacts/               开发时生成的构建、测试、预览及导出文�
 ```powershell
 # 用 Windows 自带的 C# 编译器构建，无需 .NET SDK；构建前退出正在运行的程序
 .\build.ps1
-
-# 执行回归测试，报告写入 artifacts/test-report.txt
-.\test.ps1
-
-# 可选：生成演示预览，使用独立目录，不写入正式记录
-.\牛马统计.exe --demo --data-dir artifacts\preview-data --render artifacts\overview.png
 ```
 
-构建和测试脚本支持 Windows PowerShell 5.1 与 PowerShell 7。含中文的 `.ps1` 文件使用 **UTF-8 with BOM** 编码，避免 Windows PowerShell 5.1 按系统编码读取后出现语法错误；编辑脚本时请保留该编码，`.editorconfig` 已设置对应规则。
-
-版本 1.1.1 已通过 23 项回归检查，覆盖时间边界、统计归属、分类排除、备份恢复、CSV、真实 Windows 监听生命周期，以及实时输入合并、主窗 / 迷你窗 / 软件行更新、历史和隐藏窗口、退出前保存。
